@@ -29,13 +29,14 @@ Do not redesign blindly.
 
 The visual hierarchy should follow the importance of the information.
 
+Every page has its own identity. Before making visual changes, identify the page's purpose, audience, primary business question, and natural information hierarchy. Do not impose the layout, section structure, chart types, or content model of another dashboard page. Use the ServiceNow Campaigns page only as a benchmark for quality and polish. Improve the existing page while preserving what makes that page uniquely useful. For existing pages, prioritize evolutionary improvement over unnecessary redesign. Preserve strong existing components and patterns. Only change a component when the change materially improves clarity, hierarchy, usability, or visual quality.
 ---
 
 ## 2. Executive visual hierarchy
 
 The page should have a clear hierarchy:
 
-1. Page purpose / title
+1. Page purpose/title
 2. Primary KPI or business message
 3. Important insights
 4. Supporting analysis
