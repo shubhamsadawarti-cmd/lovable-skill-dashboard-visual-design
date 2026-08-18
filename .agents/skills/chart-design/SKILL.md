@@ -1,186 +1,303 @@
 ---
-name: dashboard-charts
-description: Use when reviewing, improving, replacing, or adding charts and data visualizations on an existing dashboard page. Choose visualizations based on the business question and data structure while preserving page identity, business logic, calculations, and existing data contracts.
+name: chart-design
+description: Design and improve dashboard charts and data visualizations so they are executive-ready, visually polished, intuitive, interactive, and appropriate for the business question. Use when creating, redesigning, or improving charts, graphs, data visualizations, chart interactions, tooltips, legends, labels, axes, colors, or chart layouts.
 ---
 
-# Dashboard Charts & Data Visualization
+# Chart Design & Visualization Skill
 
 ## Purpose
 
-Create charts that communicate business information quickly, clearly, and confidently to an executive audience.
+Create dashboard charts that communicate insights quickly and feel polished, intentional, and executive-ready.
 
-The goal is NOT to maximize the number of charts or make charts visually decorative.
+Charts should not simply display data. They should help the user understand the story behind the data.
 
-The goal is:
+The goal is to avoid generic, stale, overly dense, or technically correct visualizations and instead create charts that are:
 
-> Turn data into an immediately understandable business story.
+- visually polished
+- easy to interpret
+- appropriately interactive
+- consistent with the dashboard
+- responsive
+- executive-friendly
+- insight-oriented
+- visually differentiated
+- easy to scan
 
-Use the ServiceNow Campaigns page as a benchmark for chart quality and polish, but DO NOT copy its chart layout or force the same chart types onto other pages.
-
-Every page has its own identity and should use the visualization types that best communicate its specific business questions.
-
----
-
-# 1. Preserve Page Identity
-
-Before changing any chart:
-
-- Understand the purpose of the page.
-- Identify the primary business question.
-- Understand what the current chart is intended to communicate.
-- Preserve the page's existing identity and information hierarchy.
-- Do not redesign the entire page unless explicitly requested.
-- Do not introduce charts simply because they look visually impressive.
-
-A Pipeline page should continue to feel like a Pipeline page.
-
-A Revenue page should continue to feel like a Revenue page.
-
-A Partner page should continue to feel like a Partner page.
-
-Charts should strengthen the page's story rather than redefine it.
+Do not apply the same chart type everywhere. Select the visualization based on the question the chart needs to answer.
 
 ---
 
-# 2. Start With the Business Question
+# 1. Start With the Business Question
 
-Before choosing a chart type, determine what the visualization is answering.
+Before selecting a chart, determine what the user needs to understand.
 
-Examples:
+Typical questions include:
 
-### Trend question
+- How is something changing over time?
+- How large is each category?
+- How does one category compare with another?
+- What contributes most to the total?
+- How is a population distributed?
+- Where is the concentration?
+- What is the mix?
+- What is underperforming?
+- What is driving the result?
 
-"How has pipeline changed over time?"
+Choose the chart based on the question rather than defaulting to the easiest chart to implement.
 
-Prefer:
+---
 
-- line chart
-- area chart
-- cumulative line
-- comparison line
+# 2. Chart Selection
 
-### Composition question
+Use chart types intentionally.
 
-"What makes up the total?"
-
-Prefer:
-
-- donut
-- pie
-- stacked bar
-- 100% stacked bar
-
-### Ranking question
-
-"Which partners/accounts/industries contribute the most?"
+### Trends over time
 
 Prefer:
 
-- horizontal bar chart
-- ranked bar chart
+- line charts
+- area charts when cumulative magnitude is important
+- combination charts only when there is a clear reason
 
-### Distribution question
+Use time-series charts when the primary question is movement over time.
 
-"How are accounts distributed across company sizes?"
+Avoid unnecessarily complicated multi-series charts.
 
-Prefer:
-
-- horizontal bar chart
-- histogram-style distribution
-- grouped distribution
-
-### Comparison question
-
-"How does A compare with B?"
+### Category comparison
 
 Prefer:
 
-- grouped bar
-- stacked bar
-- paired KPI treatment
-- comparison line
+- horizontal bar charts
+- vertical bar charts when categories are few
+- grouped bars when comparison across a small number of dimensions is necessary
+
+For long category names, prefer horizontal bars.
+
+### Distribution
+
+Prefer:
+
+- horizontal bar charts
+- histograms where appropriate
+- bucketed distributions
+
+For employee-size distributions, company-size ranges, pipeline ranges, etc., horizontal bars are generally preferred.
+
+### Composition / Mix
+
+Prefer:
+
+- donut charts
+- pie charts when there are very few categories
+- 100% stacked bars for more precise comparison
+
+Use pie/donut charts when the user needs to understand composition rather than exact category comparison.
+
+Avoid pie charts with too many slices.
 
 ### Geographic mix
 
-"Where are these accounts located?"
+When there are only a few meaningful geographic groups, a donut or pie chart can provide a strong executive summary.
+
+For many countries or regions, prefer a sorted horizontal bar chart or another more scalable visualization.
+
+### Ranking
 
 Prefer:
 
-- donut/pie for simple regional composition
-- ranked horizontal bar when there are many countries/locations
+- sorted horizontal bar charts
+- ranked tables with visual emphasis
+- compact leaderboard-style components
 
-### Status progression
+Always make the ranking order obvious.
 
-"How are accounts/deals progressing through stages?"
+### KPI / headline metrics
+
+Use:
+
+- KPI cards
+- large-value metric blocks
+- small supporting trend indicators
+
+Do not use a chart when a single number communicates the insight better.
+
+---
+
+# 3. Visual Hierarchy
+
+Every chart should have a clear hierarchy.
+
+The user should immediately understand:
+
+1. What the chart represents
+2. What the most important insight is
+3. What the comparison is
+4. What the supporting detail is
+
+Do not give every visual element equal visual weight.
+
+Use:
+
+- clear chart titles
+- concise subtitles where useful
+- highlighted primary values
+- muted secondary information
+- intentional spacing
+
+The most important information should visually dominate.
+
+---
+
+# 4. Chart Titles
+
+Chart titles should explain what the user is looking at.
 
 Prefer:
 
-- funnel
-- segmented progression
-- horizontal stage bars
-- carefully designed status pipeline
+- "Account Distribution by Employee Size"
+- "Pipeline Trend vs Target"
+- "Revenue Contribution by Partner"
+- "Geographic Mix"
 
-Do not use a chart type simply because it is available.
+Avoid vague titles such as:
 
----
+- "Distribution"
+- "Overview"
+- "Data"
+- "Chart"
+- "Analysis"
 
-# 3. Choose the Simplest Effective Visualization
-
-The best chart is the simplest chart that communicates the intended message.
-
-Avoid unnecessary complexity.
-
-For example:
-
-If the question is:
-
-"What percentage of accounts are NorAm vs INTL?"
-
-A simple donut is preferable to a complex stacked visualization.
-
-If the question is:
-
-"Which industries have the most accounts?"
-
-A horizontal bar chart is preferable to a pie chart with 12 slices.
-
-If the question is:
-
-"How has revenue changed month over month?"
-
-A line chart is preferable to twelve separate KPI cards.
+If useful, include a short contextual subtitle explaining the metric or timeframe.
 
 ---
 
-# 4. Avoid Repetitive Chart Design
+# 5. Color System
 
-Do not automatically turn every dataset into a vertical bar chart.
+Use color intentionally rather than decorating the chart.
 
-A page containing:
+Colors should communicate meaning.
 
-- Bar chart
-- Bar chart
-- Bar chart
-- Bar chart
+Use a restrained palette.
 
-often feels like a generic BI dashboard.
+### Semantic colors
 
-Use visual variety when the underlying questions differ.
+Use consistent semantics across the dashboard:
 
-For example:
+- Green = positive / healthy / achieved
+- Yellow or amber = warning / attention
+- Red = negative / risk / below expectation
+- Neutral gray = supporting or inactive information
+
+Do not use red simply because it looks visually strong.
+
+### Categorical colors
+
+For categories that do not have semantic meaning:
+
+- use a restrained set of complementary colors
+- maintain consistency across the dashboard
+- avoid excessive colors
+- avoid rainbow palettes
+
+### Highlighting
+
+When one category is the focus:
+
+- highlight the primary category
+- keep secondary categories visually quieter
+
+Do not make every bar, slice, or line equally prominent.
+
+---
+
+# 6. Backgrounds and Visual Treatment
+
+Charts should generally sit on clean, uncluttered backgrounds.
+
+Prefer:
+
+- white or clean neutral chart areas
+- subtle borders
+- soft cards
+- generous whitespace
+- restrained shadows
+
+Avoid:
+
+- heavy gradients
+- dark chart backgrounds unless specifically appropriate
+- excessive borders
+- excessive shadows
+- decorative elements that compete with the data
+
+The chart should feel premium without feeling ornamental.
+
+---
+
+# 7. Gridlines and Axes
+
+Use gridlines only when they improve readability.
+
+Prefer:
+
+- subtle horizontal gridlines
+- minimal vertical gridlines
+- clean axes
+- muted axis labels
+
+Avoid:
+
+- heavy gridlines
+- unnecessary borders around the plotting area
+- excessive tick marks
+- visually dominant axes
+
+Remove unnecessary chart furniture.
+
+---
+
+# 8. Labels and Data Values
+
+Show values when they improve comprehension.
+
+Use direct labels when:
+
+- there are few categories
+- exact values matter
+- the chart would otherwise require excessive tooltip interaction
+
+Avoid showing every value when it creates clutter.
+
+For dense charts:
+
+- prioritize tooltips
+- highlight important values
+- use abbreviated numbers where appropriate
+
+Examples:
+
+- 1.2M
+- $450K
+- 25.4K
+
+Maintain consistent number formatting across the dashboard.
+
+---
+
+# 9. Tooltips
+
+Tooltips should be polished and useful.
+
+When hovering over a chart element, show:
+
+- category / series name
+- exact value
+- relevant contextual information
+- percentage where useful
+
+Example:
 
 ```text
-Industry Mix
-→ horizontal bar
-
-Geography Mix
-→ donut
-
-Employee Distribution
-→ horizontal bar
-
-Trend
-→ line / area
-
-Status
-→ segmented progression
+100K+ Employees
+33 accounts
+32.4% of prospects
