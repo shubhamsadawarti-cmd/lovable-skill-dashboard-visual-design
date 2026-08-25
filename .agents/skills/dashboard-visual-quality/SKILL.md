@@ -1,358 +1,632 @@
 ---
-name: dashboard-visual-design
-description: Use when improving, redesigning, or visually polishing an existing dashboard page or dashboard section. Apply premium executive-ready visual design principles while adapting the layout to the page's specific purpose. Do not use this skill to change business logic, calculations, data sources, or KPI definitions unless explicitly requested.
+name: dashboard-visual-quality
+description: Elevates existing dashboard pages to a polished, premium, executive-ready visual standard while preserving the page's existing identity, structure, business logic, and purpose. Use when improving page-level visual quality, layout, spacing, typography, colors, cards, interactions, animations, responsiveness, and overall UX.
 ---
 
-# Dashboard Visual Design
+# Dashboard Visual Quality
 
 ## Purpose
 
-Improve the visual quality of an existing dashboard page so it feels premium, executive-ready, intentional, and easy to understand.
+Improve the visual quality and usability of an existing dashboard page without unnecessarily redesigning its structure or changing its business logic.
 
-Use the ServiceNow Campaigns page in the Partnerships Dashboard as the benchmark for visual polish.
+The goal is:
 
-Do NOT copy its exact layout. Reuse the design principles and adapt them to the purpose and content of the page being improved.
+> Make the page feel intentionally designed, premium, modern, smooth, executive-ready, and easy to understand.
+
+This skill is a **quality framework**, not a fixed page template.
+
+Every page has its own identity, content density, purpose, and interaction model. Apply these principles intelligently rather than forcing every page to look identical.
 
 ---
 
-## 1. First understand the page
+# Core Rule
 
 Before making changes:
 
-- Inspect the existing page structure.
-- Understand what the page is trying to communicate.
-- Identify the primary executive question the page should answer.
-- Identify the most important information and the supporting information.
-- Preserve the existing business logic, calculations, data sources, and filters unless the user explicitly asks for changes.
+1. Inspect the existing page.
+2. Understand its purpose and information hierarchy.
+3. Identify what already works.
+4. Identify the biggest visual and UX weaknesses.
+5. Preserve existing business logic and data calculations.
+6. Preserve the page's identity and primary structure unless the requested improvement requires otherwise.
+7. Improve visual quality through deliberate refinement rather than adding more UI.
 
-Do not redesign blindly.
+Do not redesign a page simply because it looks different from another page.
 
-The visual hierarchy should follow the importance of the information.
+The ServiceNow Campaigns page may be used as a **quality benchmark**, but it is NOT a visual template that every page must copy.
 
-Every page has its own identity. Before making visual changes, identify the page's purpose, audience, primary business question, and natural information hierarchy. Do not impose the layout, section structure, chart types, or content model of another dashboard page. Use the ServiceNow Campaigns page only as a benchmark for quality and polish. Improve the existing page while preserving what makes that page uniquely useful. For existing pages, prioritize evolutionary improvement over unnecessary redesign. Preserve strong existing components and patterns. Only change a component when the change materially improves clarity, hierarchy, usability, or visual quality.
 ---
 
-## 2. Executive visual hierarchy
+# 24 Visual Quality Principles
 
-The page should have a clear hierarchy:
+## 1. Visual Hierarchy
 
-1. Page purpose/title
-2. Primary KPI or business message
-3. Important insights
+The most important information must be visually dominant.
+
+Prioritize:
+
+1. Page purpose
+2. Primary business insight
+3. Important KPIs
 4. Supporting analysis
-5. Detailed data
+5. Detailed information
 
-Avoid giving every element equal visual weight.
+Do not give equal visual weight to everything.
 
-The user should be able to understand the page's main message within approximately 10–30 seconds.
-
-Use:
-
-- size
-- spacing
-- typography
-- positioning
-- restrained color
-- sectioning
-- visual emphasis
-
-to establish hierarchy.
+Use size, spacing, typography, contrast, placement, and emphasis to establish hierarchy.
 
 ---
 
-## 3. Layout and spacing
+## 2. Page Composition
 
-Use generous, intentional spacing.
+Create a clear visual flow from top to bottom.
 
-Avoid:
+The page should naturally answer:
 
-- cramped cards
-- excessive borders
-- tightly packed charts
-- unnecessary empty gaps
-- inconsistent padding
-- misaligned sections
-- excessive information inside one card
+> What am I looking at?
+> What matters?
+> What should I notice?
+> What can I explore next?
 
-Prefer:
+Avoid layouts that feel like unrelated widgets placed next to each other.
 
-- clear section boundaries
-- consistent internal padding
-- aligned card edges
-- predictable spacing between sections
-- breathing room around charts and KPIs
-
-Do not force multiple unrelated sections into one row simply to save vertical space.
-
-If three large sections are easier to understand vertically, use three sections vertically.
+Sections should feel intentionally connected.
 
 ---
 
-## 4. Cards
+## 3. Section Structure
 
-Cards should feel like intentional information containers, not generic BI widgets.
+Use clear sections to organize information.
 
-Use:
+Each section should have:
 
-- subtle borders
-- restrained shadows where appropriate
-- rounded corners
-- consistent padding
-- clear headings
-- strong primary numbers
-- secondary supporting information
+- clear purpose
+- appropriate heading
+- consistent spacing
+- logical grouping
+- visual separation where necessary
 
-Avoid:
+Avoid excessive boxes, borders, and unnecessary containers.
 
-- excessive shadows
-- heavy gradients
-- decorative elements without purpose
-- too many nested cards
-- excessive visual noise
+Use whitespace as a structural element.
 
-A card should answer one clear question.
+---
+
+## 4. Spacing
+
+Use consistent spacing throughout the page.
+
+Pay particular attention to:
+
+- page margins
+- section spacing
+- card padding
+- chart spacing
+- heading-to-content spacing
+- gaps between cards
+- modal/table spacing
+
+Avoid both:
+
+- cramped layouts
+- excessive empty space
+
+Spacing should create rhythm.
 
 ---
 
 ## 5. Typography
 
-Maintain a strong typography hierarchy.
+Typography should establish hierarchy rather than simply display text.
+
+Use clear differentiation between:
+
+- page title
+- section title
+- card title
+- KPI value
+- supporting label
+- metadata
+- tooltip text
+- table content
+
+Avoid unnecessary font-size variation.
+
+Keep text readable and concise.
+
+Do not use typography as decoration.
+
+---
+
+## 6. Color System
+
+Use a restrained and intentional color system.
+
+Colors should communicate meaning.
 
 Use:
 
-- large, confident headings
-- readable section titles
-- clear KPI numbers
-- restrained uppercase labels for metadata
-- readable supporting text
+- neutral colors for structure
+- accent colors for emphasis
+- semantic colors for status
+- stronger contrast for important information
 
-Avoid:
+Do not introduce many unrelated colors.
 
-- excessive font sizes
-- too many font weights
-- overly small labels
-- long blocks of text
-- inconsistent capitalization
+Do not use bright colors simply to make the page look more exciting.
 
-Typography should make the page easier to scan, not simply make it look decorative.
+Maintain consistency with the dashboard's existing visual language.
 
 ---
 
-## 6. Color
+## 7. KPI and Card Design
 
-Use color intentionally.
+Cards should communicate information quickly.
 
-The dashboard should have a restrained visual language.
+A good KPI card should have:
 
-Use color to communicate:
+- clear metric
+- strong primary value
+- concise label
+- optional supporting context
+- clear hierarchy
 
-- category
-- status
-- emphasis
-- comparison
-- interaction
+Avoid oversized decorative cards that consume space without adding information.
 
-Do not color every element.
+Use subtle borders, shadows, backgrounds, or highlights where appropriate.
 
-Avoid:
-
-- rainbow charts
-- excessive saturated colors
-- arbitrary colors between sections
-- using color without semantic meaning
-
-When a page contains multiple categories, use a consistent palette across related visualizations.
-
-Maintain strong contrast and readability.
+Cards should feel connected to the page rather than floating independently.
 
 ---
 
-## 7. Visual variety
+## 8. Chart Selection
 
-Do not make every section look like the same component.
-
-Choose the visual treatment based on the information.
+Choose the chart based on the question being answered.
 
 Examples:
 
-- KPI → large number + concise supporting context
+- comparison → bar chart
+- ranking → horizontal bar chart
+- trend → line/area chart
 - composition → donut/pie
-- ranking → horizontal bar
-- trend → line/area
-- distribution → horizontal bar
-- comparison → grouped/stacked bars
-- status → compact status treatment
-- detailed records → table/drill-down
+- distribution → histogram/bar distribution
+- geographic mix → donut/pie or appropriate geographic visualization
+- progression → funnel/progress visualization
 
-The goal is not maximum chart variety.
+Do not use the same chart type repeatedly simply for consistency.
 
-The goal is to use the **most intuitive visual representation for each question**.
+Chart choice should improve comprehension.
 
 ---
 
-## 8. Interaction quality
+## 9. Chart Composition
 
-Interactions should feel smooth and intentional.
-
-Use subtle transitions for:
-
-- opening/closing modals
-- expanding sections
-- changing filters
-- changing views
-- loading states
-
-Avoid unnecessary animation.
-
-Hover states must never cause layout shifts.
-
-Elements should not:
-
-- move
-- resize
-- jump
-- change column widths
-- cause neighboring content to shift
-
-unless the interaction explicitly requires it.
-
----
-
-## 9. Tooltips
-
-Use tooltips when they provide useful context.
-
-Good tooltip examples:
-
-- exact chart values
-- full text for truncated labels
-- definitions
-- additional metadata
-
-Do not use tooltips for information that should simply be visible.
-
-Tooltips should be clean, readable, and consistent.
-
----
-
-## 10. Data density
-
-Do not try to show everything on the first screen.
+Charts must be visually clear and purposeful.
 
 Prioritize:
 
-- what leadership needs immediately
-- the main story
-- the most useful comparisons
+- readable labels
+- sensible axis ranges
+- appropriate spacing
+- useful legends
+- meaningful annotations
+- clear data hierarchy
 
-Move detailed information into:
+Avoid:
 
-- drill-downs
-- expandable sections
+- unnecessary gridlines
+- excessive labels
+- tiny text
+- excessive chart decoration
+- overly dense visuals
+
+A chart should be understandable within seconds.
+
+---
+
+## 10. Chart Styling
+
+Charts should feel modern and integrated into the page.
+
+Use:
+
+- clean backgrounds
+- subtle gridlines
+- appropriate corner radius
+- restrained colors
+- strong emphasis for important data
+- muted styling for secondary data
+
+Avoid stale-looking default chart styles.
+
+Do not over-style charts with unnecessary gradients, shadows, or decoration.
+
+---
+
+## 11. Tooltips
+
+Tooltips should add useful context without becoming distracting.
+
+Tooltips should:
+
+- appear smoothly
+- remain readable
+- show relevant values
+- use consistent formatting
+- avoid covering critical information where possible
+
+Use tooltips for information that would otherwise clutter the chart.
+
+Do not duplicate every visible label inside the tooltip.
+
+---
+
+## 12. Hover Behavior
+
+Hover states should be intentional and stable.
+
+Use subtle hover effects when they improve discoverability.
+
+Examples:
+
+- slight background change
+- subtle border emphasis
+- small elevation change
+- cursor change for clickable elements
+
+Avoid:
+
+- layout shifts
+- changing element dimensions
+- text jumping
+- columns moving
+- charts resizing
+- table rows changing height
+
+For tables and dense data views, prioritize stability over decorative hover effects.
+
+---
+
+## 13. Animation
+
+Animations should communicate state changes, hierarchy, or interaction.
+
+Use subtle animation for:
+
+- page transitions
+- modal opening
+- expanding sections
+- chart appearance
+- hover states
+- filtering
+
+Animations should be:
+
+- short
+- smooth
+- purposeful
+- consistent
+
+Avoid excessive motion.
+
+Do not animate every component independently.
+
+Animation should never slow down a business workflow.
+
+---
+
+## 14. Transitions
+
+Interactive state changes should feel smooth.
+
+Use consistent transitions for:
+
+- tabs
+- filters
+- cards
 - modals
-- secondary views
+- dropdowns
+- expandable sections
+- hover states
 
-The dashboard should feel informative without feeling crowded.
-
----
-
-## 11. Responsive behavior
-
-The layout must remain usable at different viewport sizes.
-
-Do not allow:
-
-- horizontal overflow
-- clipped charts
-- overlapping labels
-- broken cards
-- unreadable tables
-
-When necessary, change the layout structure at smaller widths rather than simply shrinking everything.
+Avoid abrupt visual changes unless immediate feedback is necessary.
 
 ---
 
-## 12. Preserve existing functionality
+## 15. Interactive States
 
-Unless explicitly requested:
+Every interactive component should have clear states.
 
-DO NOT change:
+Consider:
 
-- business logic
-- KPI calculations
-- fiscal-year logic
-- filtering logic
-- data transformations
-- API contracts
-- Supabase logic
-- Salesforce ingestion
-- existing routes
-- permissions
-- authentication
+- default
+- hover
+- active
+- selected
+- disabled
+- loading
+- error
+- empty
 
-This skill is primarily for visual and UX improvement.
+Users should understand what is clickable and what is currently selected.
+
+Do not rely solely on color to communicate state.
 
 ---
 
-## 13. ServiceNow Campaigns benchmark
+## 16. Highlights and Emphasis
 
-The ServiceNow Campaigns page represents the desired quality bar for this dashboard.
+Important insights should receive intentional visual emphasis.
 
-Use it as a reference for:
+Use:
 
+- accent color
+- bold typography
+- subtle background
+- border treatment
+- callout
+- annotation
+- visual positioning
+
+Do not highlight everything.
+
+If everything is emphasized, nothing is emphasized.
+
+---
+
+## 17. Filters
+
+Filters should feel integrated rather than consuming excessive visual space.
+
+Prioritize:
+
+- clear labels
+- logical grouping
+- easy scanning
+- obvious active state
+- consistent controls
+
+Avoid unnecessary filter controls.
+
+Where possible, preserve the dashboard's existing global filter behavior.
+
+Do not introduce page-specific filtering that conflicts with global filtering without a clear reason.
+
+---
+
+## 18. Tables
+
+Tables should prioritize readability and stability.
+
+Use:
+
+- clear headers
+- appropriate column widths
+- consistent alignment
+- readable row height
+- sensible sorting
+- useful filtering
+- pagination where appropriate
+
+Avoid unnecessary decoration.
+
+Hovering over rows should NOT cause layout shifts.
+
+Columns must remain stable when interacting with the table.
+
+Long text should use truncation or controlled wrapping with tooltips where appropriate.
+
+---
+
+## 19. Modals and Drill-Downs
+
+Drill-downs should feel like a natural extension of the page.
+
+Use:
+
+- smooth opening transition
+- strong modal hierarchy
+- clear title
+- contextual summary
+- stable table layout
+- useful sorting/filtering
+- clear close action
+
+Do not make drill-downs feel like separate applications.
+
+Reuse existing reusable modal/table patterns whenever available.
+
+---
+
+## 20. Loading, Empty, and Error States
+
+Every major interactive component should handle:
+
+- loading
+- empty
+- error
+
+states gracefully.
+
+Avoid blank areas that look broken.
+
+Use concise messaging.
+
+Loading states should preserve layout dimensions where possible to avoid content jumping.
+
+---
+
+## 21. Responsive Fitment
+
+The page must remain visually coherent across supported screen sizes.
+
+Check:
+
+- card widths
+- chart dimensions
+- table overflow
+- modal sizing
+- text wrapping
+- spacing
+- navigation
+- filter controls
+
+Avoid layouts where components become cramped or unreadable.
+
+Prioritize desktop dashboard usability while maintaining reasonable adaptability.
+
+---
+
+## 22. Information Density
+
+The objective is not to maximize information displayed.
+
+The objective is:
+
+> Maximum useful information with minimum cognitive load.
+
+Remove or visually de-emphasize information that does not contribute to the page's purpose.
+
+Prefer progressive disclosure when detailed information is needed.
+
+Use drill-downs, modals, expandable sections, or secondary views instead of overcrowding the main page.
+
+---
+
+## 23. Executive Storytelling
+
+The page should help a leader understand the business quickly.
+
+A strong page should make it easy to identify:
+
+- what is happening
+- what matters
+- where there is risk
+- where there is opportunity
+- what changed
+- what requires attention
+
+Visual hierarchy should support the business narrative.
+
+Do not optimize purely for visual beauty.
+
+The page must remain useful for decision-making.
+
+---
+
+## 24. Final Visual QA
+
+Before completing the task, inspect the page as a user.
+
+Check:
+
+### Visual
+- Does the page feel premium?
+- Is the hierarchy obvious?
+- Is spacing consistent?
+- Are colors intentional?
+- Do charts look modern?
+- Are sections visually balanced?
+
+### Interaction
+- Do hover states remain stable?
+- Are transitions smooth?
+- Are clickable elements obvious?
+- Do modals open naturally?
+- Do filters behave predictably?
+
+### Data presentation
+- Are labels readable?
+- Are tooltips useful?
+- Are charts understandable?
+- Are tables aligned?
+- Are numbers formatted correctly?
+
+### Fitment
+- Does the page feel cohesive?
+- Is anything unnecessarily crowded?
+- Is there excessive empty space?
+- Are components aligned?
+
+### Regression
+- Did any existing business logic change?
+- Did any existing KPI calculation change?
+- Did global filters change?
+- Did unrelated pages change?
+
+If the answer to any regression question is yes, fix it before completing the task.
+
+---
+
+# Design Benchmark
+
+Use the existing ServiceNow Campaigns page as a benchmark for:
+
+- visual polish
 - spacing
 - typography
-- card composition
-- restrained color
-- chart variety
-- visual hierarchy
-- section separation
+- chart quality
+- color discipline
+- interaction smoothness
+- section composition
 - executive readability
-- interaction quality
 
 However:
 
-DO NOT copy its exact page structure.
+DO NOT copy its layout blindly.
 
-Every dashboard page should have its own layout based on its content and purpose.
+Each dashboard page should retain its own:
 
----
+- identity
+- purpose
+- information hierarchy
+- content structure
+- interaction model
 
-## 14. Before implementation
-
-First inspect the existing implementation.
-
-Identify:
-
-- current layout
-- existing reusable components
-- existing design tokens
-- existing chart components
-- existing modal/table components
-- existing spacing conventions
-
-Reuse existing components where appropriate.
-
-Do not create duplicate components when an existing reusable component already provides the required behavior.
+The benchmark defines the **quality bar**, not the page template.
 
 ---
 
-## 15. Quality bar
+# Implementation Rules
 
-Before considering the work complete, verify:
+When applying this skill to an existing page:
 
-- The page has a clear visual hierarchy.
-- The most important information is visually dominant.
-- Sections are not unnecessarily crowded.
-- Charts are appropriate for the data.
-- Typography is consistent.
-- Spacing is intentional.
-- Colors are restrained and meaningful.
-- Cards feel polished.
-- Interactions feel smooth.
-- Hover states do not cause layout shifts.
-- Charts and labels remain readable.
-- No unnecessary visual decoration was introduced.
-- Existing business logic remains unchanged.
+1. Inspect the existing implementation first.
+2. Do not rewrite the page unnecessarily.
+3. Preserve existing data sources.
+4. Preserve existing business logic.
+5. Preserve existing calculations.
+6. Preserve existing global filters unless explicitly asked to change them.
+7. Reuse existing components where appropriate.
+8. Prefer targeted improvements over wholesale rewrites.
+9. Avoid introducing new dependencies unless necessary.
+10. Keep visual behavior consistent with the rest of the dashboard.
+11. Do not change unrelated pages.
+12. Do not create placeholder data when real data already exists.
+13. Do not invent metrics or business logic.
+14. Do not sacrifice usability for visual effects.
 
-The final result should feel like a polished executive product, not a generic BI dashboard.
+---
+
+# Definition of Done
+
+A page is visually improved when:
+
+- the hierarchy is immediately understandable
+- the page feels cohesive
+- charts are purposeful and modern
+- colors communicate meaning
+- spacing feels intentional
+- typography is consistent
+- interactions feel smooth
+- hover states are stable
+- tables remain readable
+- drill-downs feel polished
+- information density is controlled
+- the page is executive-friendly
+- existing functionality still works
+- no unrelated functionality has changed
+
+The goal is not "more design."
+
+The goal is **better communication, better usability, and a premium dashboard experience.**
